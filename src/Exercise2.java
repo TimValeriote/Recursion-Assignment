@@ -22,7 +22,6 @@ public class Exercise2 {
 //        System.out.println(convert(input.nextInt(), input.nextInt()));
 //        System.out.println(isPalindrome(input.nextLine()));
 
-
     }
 
     public static int sumDigits(int n) { //problem 1
@@ -107,7 +106,6 @@ public class Exercise2 {
             return false;
         }
 
-
     }
 
     public int marbles(int[] bags, int max) {
@@ -116,7 +114,6 @@ public class Exercise2 {
         }
         int[] leftOvers = new int[bags.length - 1];
         int aBag = bags[0];
-
 
         for (int i = 0; i < leftOvers.length; i++) {
             leftOvers[i] = bags[i + 1];
@@ -133,5 +130,14 @@ public class Exercise2 {
         } else {
             return 0;
         }
+    }
+    
+    public int sumUpTo(int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n + sumUpTo(n - 1);
+        }
+
     }
 }
